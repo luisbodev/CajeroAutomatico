@@ -1,0 +1,12 @@
+$azul: #2f586e;
+$gris: #dae1e7;
+body{
+	background-color: $gris;
+}
+button{
+	background-color: $azul;
+}
+input{
+	color: $azul;
+	border: 2px solid $azul;
+}

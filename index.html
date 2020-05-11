@@ -1,0 +1,106 @@
+<!DOCTYPE>
+	<html lang="es">
+		<head>
+			<title>Cajero - Banco Cuscatlan</title>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<!--icono-->
+			<link rel="icon" type="image/png" href="img/icono.png" />
+			<!--Tailwind-->
+			<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+			<!--CSS-->
+			<link rel="stylesheet" type="text/css" href="css/index.css">
+		</head>
+		<body>
+			<div class="flex h-screen justify-center items-center">
+				<div class="flex flex-col justify-center">
+					
+						<img src="img/logo-banco-cuscatlan.svg" class="flex">
+						<br>
+					<div id="entrar">
+						<button id="btnEntrar" class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="mostrarIngresarPIN()">Entrar al Sistema</button>
+					</div>
+					<div id="ingresarPIN" style="display: none">
+						<br>
+						<label class="font-bold ">Ingrese su PIN:</label>
+						<input type="password" name="pin" id="pin" class="pin rounded w-full p-2	font-bold">
+						<div class="flex flex-col my-2">
+							<button id="btnContinuar" class=" hover:bg-blue-700 text-white font-bold py-2 px-4 rounded " onclick="mostrarOpc()">Continuar</button>	
+						</div>
+					</div>	
+
+					<div id="opciones" style="display: none">
+						<br>
+						<label class="font-bold ">Seleccione la opción a realizar</label>
+						<div class="flex flex-col my-2">
+							<button id="estado" class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded " onclick="mostrarEstadoCuenta()">Consultar Estado de Cuenta</button>
+						</div>
+						<div class="flex flex-col my-2">
+							<button id="retiro" class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Retirar Dinero</button>
+						</div>
+						<div class="flex flex-col my-2">
+							<button id="cambiar" class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Cambiar PIN</button>
+						</div>
+					</div>
+					<div id="estadoOpc" style="display: none">
+						<br>
+						<label class="font-bold ">Estado de cuenta</label>
+						<p class="estadoCue font-bold text-center"></p>
+						<div class="flex flex-col my-2">
+							<button id="salir" class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Salir</button>	
+						</div>
+					</div>
+					<div id="retirarDi" style="display: none">
+						<br>
+						<label class="font-bold ">Retirar Dinero</label>
+						<br>
+						<p>Ingrese el monto a retirar:</p>
+						<input type="text" name="monto" id="monto" class="rounded w-full p-2 font-bold">
+						<div class="flex flex-col my-2">
+							<button id="confirmar" class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Confirmar</button>	
+						</div>
+					</div>
+					<div id="cambiarPinOpc" style="display: none">
+						<br>
+						<label class="font-bold ">Cambiar PIN</label>
+						<br>
+						<div id="ingresarPINAntiguo">
+							<p>Ingrese el PIN antiguo:</p>
+							<input type="password" name="pinAnti" id="pinAnti" class="rounded w-full p-2 font-bold">
+							<div class="flex flex-col my-2">
+								<button id="contiPinAnti" class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Continuar</button>	
+							</div>
+						</div>
+						<div id="ingresarPIN_nuevo">
+							<p>Ingrese el nuevo PIN:</p>
+							<input type="password" name="pinNuevo" id="pinNuevo" class="rounded w-full p-2 font-bold">
+							<div class="flex flex-col my-2">
+								<button id="contiPinNue" class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Continuar</button>	
+							</div>
+						</div>
+						<div id="confirmarNuevoPin">
+							<p>Confirme el nuevo PIN:</p>
+							<input type="password" name="pinConf" id="pinConf" class="rounded w-full p-2 font-bold">
+							<div class="flex flex-col my-2">
+								<button id="contiPinConf" class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Continuar</button>	
+							</div>
+						</div>
+						<div id="">
+							<label class="font-bold ">Su PIN ha sido cambiado exitosamente</label>
+							<div class="flex flex-col my-2">
+								<button id="salir" class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Salir</button>	
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>	
+			
+			
+
+			<script type="text/javascript" src="js/index.js"></script>
+
+			
+		</body>
+</html>
